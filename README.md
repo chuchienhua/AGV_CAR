@@ -2,19 +2,30 @@
 # Ardentec Industrial-Academic Cooperation AGV Project
 
 ## This repo contains the ROS codes and Arduino codes for Ardentec's AGV.
-### These contents were backuped at 12/20/2021, documented by Yu-An, Su.
+### These contents were backuped at 05/03/2022, documented by Yu-An, Su.
 
 ### 1. AGV_ws
-Function : Motion Control, SICK LiDAR SLAM.
+1. Mission Navigation
+2. Motion Control
+3. SICK LiDAR SLAM
+4. Cabinet Center Locate.
 ### 2. Two_Hokuyo_ws
-Function : Merge two scan topic
+* Merge two scan topic (ira_laser_merger)
 ### 3. Obs_Detector_ws
-Function : LiDAR obstacle detection, obstacle publish
+1. LiDAR obstacle detection (Wall, Fence)
+2. Cabinet centerPoint Publish.
 ### 4. Dispatch_ws
-Function : Receive dispatch packets from HMI and C# server.
-### 5. Mecanum_Kinematic_1214
-Function : Motor control, Serial connection between ROS and Arduino.
-### 6. Auto_Two_Sick_Slam.py
-Function : Automatically type commands in Terminal.
-### 7. udp_send.py
-Function : Send navigation mission to AGV.
+1. Receive navigation missions from Dispatch Server
+2. Send updated AGV status to Dispatch Server.
+### 5. Mecanum_Kinematic_220502
+1. Receive speed command from ROS.
+2. Calculate mecanum wheel kinematics.
+3. Motor speed and direction control.
+### 6. missionGUI
+* GUI for editing mission points.
+### 7. Auto_System.py
+* Automatically type commands in terminal.
+### 8. udp_send_auto.py
+* Locally send navigation mission to AGV.
+### 9. Ardentec AGV Data Format.xlsx
+* Protocols for AGV status update, mission command, battery serial connection.

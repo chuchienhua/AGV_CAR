@@ -3,7 +3,11 @@ import time
 
 def new_tab():
     pyautogui.hotkey('ctrl', 'shift', 't')
-    time.sleep(0.5)
+    time.sleep(1.0)
+
+def new_window():
+    pyautogui.hotkey('ctrl', 'alt', 't')
+    time.sleep(3.0)
 
 def source():
     pyautogui.typewrite('source devel/setup.bash')
@@ -76,17 +80,6 @@ source()
 pyautogui.typewrite('rosrun AnhungControl AnhungControl 192.168.43.146 9930')
 pyautogui.hotkey('\n')
 
-# create hector_slam tab
-new_tab()
-
-pyautogui.typewrite('cd ~/AGV_ws')
-pyautogui.hotkey('\n')
-
-source()
-
-pyautogui.typewrite('roslaunch hector_slam_launch tutorial.launch')
-pyautogui.hotkey('\n')
-
 # create LegDetect tab
 new_tab()
 
@@ -109,3 +102,24 @@ source()
 pyautogui.typewrite('rosrun obstacle_detector LegDetect_node')
 pyautogui.hotkey('\n')
 
+# create Dispatch tab
+new_tab()
+
+pyautogui.typewrite('cd ~/Dispatch_ws')
+pyautogui.hotkey('\n')
+
+source()
+
+pyautogui.typewrite('rosrun subscriber agvDispatch.py')
+pyautogui.hotkey('\n')
+
+# create hector_slam tab
+new_tab()
+
+pyautogui.typewrite('cd ~/AGV_ws')
+pyautogui.hotkey('\n')
+
+source()
+
+pyautogui.typewrite('roslaunch hector_slam_launch tutorial.launch')
+pyautogui.hotkey('\n')
