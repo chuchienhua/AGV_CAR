@@ -1,8 +1,4 @@
-# 台科大-欣銓 AGV產學合作案
-# Ardentec Industrial-Academic Cooperation AGV Project
-
-## This repo contains the ROS codes and Arduino codes for Ardentec's AGV.
-### These contents were backuped at 05/03/2022, documented by Yu-An, Su.
+# Mecanum Wheel-Driven AGV 麥克納姆輪自動導引車
 
 ### 1. AGV_ws
 1. Mission Navigation
