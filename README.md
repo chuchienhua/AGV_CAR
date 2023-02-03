@@ -23,5 +23,5 @@
 * Automatically type commands in terminal.
 ### 8. udp_send_auto.py
 * Locally send navigation mission to AGV.
-### 9.AGV Data Format.xlsx
+### 9. AGV Data Format.xlsx
 * Protocols for AGV status update, mission command, battery serial connection.
